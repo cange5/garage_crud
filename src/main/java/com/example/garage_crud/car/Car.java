@@ -21,6 +21,6 @@ public class Car {
     private String vendor;
     private String type;
     private Double fuel;
-    private int numberKm;
+    private int numbersKm;
     private int year;
 }

@@ -21,7 +21,7 @@ public class CarController {
     }
 
     @GetMapping("/cars/{id}")
-    public Car getStudent(@PathVariable Long id){
+    public Car getCar(@PathVariable Long id){
         return carService.getCar(id);
     }
 

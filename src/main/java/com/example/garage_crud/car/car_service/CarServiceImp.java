@@ -38,4 +38,18 @@ public class CarServiceImp implements CarService{
     public Car getCar(Long id) {
         return carsRepository.findById(id).orElseThrow();
     }
+
+    @Override
+    public List<Car> findByVendor(String vendor) {
+        return carsRepository.findByVendor(vendor);
+    }
+
+    @Override
+    public Car setFuelLevel(Long id, Double fuel) {
+        Car car = carsRepository.findById(id).orElseThrow();
+        car.setFuel(fuel);
+        return carsRepository.save(car);
+    }
+
+
 }

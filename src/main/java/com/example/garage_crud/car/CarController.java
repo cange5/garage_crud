@@ -42,4 +42,14 @@ public class CarController {
     public void deleteCar(@PathVariable Long id){
         carService.deleteCar(id);
     }
+
+    @GetMapping("/vendor/{vendor}")
+    public List<Car> getCarByVendor(@PathVariable String vendor) {
+        return carService.findByVendor(vendor);
+    }
+
+    @PutMapping("/cars/{id}/{fuel}")
+    public Car setFuelLevel(@PathVariable Long id, @PathVariable Double fuel) {
+        return carService.setFuelLevel(id, fuel);
+    }
 }

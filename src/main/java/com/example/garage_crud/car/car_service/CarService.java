@@ -10,4 +10,7 @@ public interface CarService {
     void deleteCar(Long id);
     List<Car> getAllCars();
     Car getCar(Long id);
+    List<Car> findByVendor(String vendor);
+    Car setFuelLevel(Long id, Double fuel);
+
 }
